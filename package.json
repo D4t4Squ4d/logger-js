@@ -1,0 +1,43 @@
+{
+  "name": "@datasquad/logger-js",
+  "version": "0.1.0",
+  "description": "Logger for applications created with JavaScript",
+  "main": "src/logger.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"WIP: tests aren't configured yet!\" && exit 1",
+    "format": "npx prettier --config ./.prettierrc --write ./src",
+    "doc": "jsdoc -c doc.conf.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D4t4Squ4d/logger-js.git"
+  },
+  "author": "DataSquad <contact@data-squad.net>",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/D4t4Squ4d/logger-js#readme",
+  "bugs": {
+    "url": "https://github.com/D4t4Squ4d/logger-js/issues"
+  },
+  "keywords": [
+    "logger"
+  ],
+  "files": [
+    "/src",
+    "LICENSE",
+    "README.md"
+  ],
+  "nodemonConfig": {
+    "ignore": [
+      "docs/*",
+      ".git"
+    ],
+    "env": {
+      "NODE_ENV": "development"
+    }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
+}
