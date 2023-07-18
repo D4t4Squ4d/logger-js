@@ -1,43 +1,48 @@
 {
   "name": "@datasquad/logger-js",
-  "version": "0.1.1",
-  "description": "Logger for applications created with JavaScript",
-  "main": "src/logger.js",
-  "type": "module",
+  "version": "0.2.0",
+  "description": "better log for JS/TS",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"WIP: tests aren't configured yet!\" && exit 1",
-    "format": "npx prettier --config ./.prettierrc --write ./src",
-    "doc": "jsdoc -c doc.conf.json"
+    "dev": "nodemon src/index.ts",
+    "build": "npm run lint && rimraf dist/ && tsc",
+    "start": "npm run build && node dist/index.js",
+    "test": "mocha --require ts-node/register \"./test/**/*.spec.ts\"",
+    "test-watch": "nodemon -e ts,json --exec \"npm test\"",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --config ./.prettierrc --write ./src"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/D4t4Squ4d/logger-js.git"
   },
-  "author": "DataSquad <contact@data-squad.net>",
-  "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://github.com/D4t4Squ4d/logger-js#readme",
-  "bugs": {
-    "url": "https://github.com/D4t4Squ4d/logger-js/issues"
-  },
   "keywords": [
     "logger"
   ],
-  "files": [
-    "/src",
-    "LICENSE",
-    "README.md"
-  ],
-  "nodemonConfig": {
-    "ignore": [
-      "docs/*",
-      ".git"
-    ],
-    "env": {
-      "NODE_ENV": "development"
-    }
+  "author": "DataSquad <contact@data-squad.net>",
+  "license": "SEE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/D4t4Squ4d/logger-js/issues"
   },
+  "homepage": "https://github.com/D4t4Squ4d/logger-js#readme",
   "devDependencies": {
-    "nodemon": "^2.0.15",
-    "prettier": "^2.5.1"
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.4.1",
+    "@types/sinon": "^10.0.15",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.0",
+    "rimraf": "^3.0.2",
+    "sinon": "^15.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
   }
 }

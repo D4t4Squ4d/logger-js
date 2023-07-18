@@ -1,6 +1,7 @@
 {
 	"printWidth": 160,
 	"useTabs": true,
+	"tabWidth": 2,
 	"bracketSpacing": true,
 	"arrowParens": "always",
 	"endOfLine": "lf",
@@ -8,5 +9,5 @@
 	"quoteProps": "consistent",
 	"semi": true,
 	"singleQuote": true,
-	"trailingComma": "es5"
+	"trailingComma": "all"
 }

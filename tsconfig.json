@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+		"esModuleInterop": true,
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node", "mocha"],
+    "moduleResolution": "node",
+    "incremental": false,
+    "declarationMap": true,
+    "inlineSourceMap": true,
+    "inlineSources": true
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/dist"]
+}
